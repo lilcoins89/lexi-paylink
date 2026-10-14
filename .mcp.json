@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lexi-paylink": {
+      "type": "http",
+      "url": "https://YOUR_LEXI_PUBLIC_ORIGIN/api/mcp"
+    }
+  }
+}

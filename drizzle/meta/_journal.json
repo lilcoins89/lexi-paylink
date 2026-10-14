@@ -8,6 +8,34 @@
       "when": 1788785580464,
       "tag": "0000_initial_users",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1792014261974,
+      "tag": "0001_big_magneto",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1792017152649,
+      "tag": "0002_common_steve_rogers",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1792017588242,
+      "tag": "0003_empty_red_ghost",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1792018543598,
+      "tag": "0004_pretty_santa_claus",
+      "breakpoints": true
     }
   ]
 }

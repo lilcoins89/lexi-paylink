@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="LEXI PayLink">
+  <rect width="128" height="128" rx="30" fill="#16342c"/>
+  <path d="M28 37h31c22 0 40 18 40 40v10" fill="none" stroke="#68dfb8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M100 91H69C47 91 29 73 29 51V41" fill="none" stroke="#d8fff0" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="101" cy="96" r="7" fill="#68dfb8"/>
+</svg>

@@ -1,0 +1,18 @@
+{
+  "name": "lexi-paylink",
+  "displayName": "LEXI PayLink",
+  "version": "1.0.0",
+  "description": "Create merchant-scoped Solana USDC payment requests and inspect LEXI-verified settlement through a protected MCP endpoint.",
+  "author": {
+    "name": "LEXI PayLink"
+  },
+  "repository": "https://github.com/lilcoins89/lexi-paylink",
+  "keywords": [
+    "LEXI PayLink",
+    "Solana",
+    "USDC",
+    "merchant payments",
+    "MCP"
+  ],
+  "logo": "https://files.manuscdn.com/user_upload_by_module/session_file/310519664023242229/LlAgvURaFgVKzXfb.svg"
+}
