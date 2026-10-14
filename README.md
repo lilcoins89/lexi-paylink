@@ -123,3 +123,17 @@ For the managed container, the Dockerfile builds the frontend/server and listens
 - [`TODO.md`](./TODO.md) — complete behavior criteria and delivery status.
 - [`docs/paybox-integration-notes.md`](./docs/paybox-integration-notes.md) — source-cited research notes.
 - [`paybox-plugin/README.md`](./paybox-plugin/README.md) — LEXI MCP integration guide and install/invocation example.
+
+
+## Optional Grateful.me WooCommerce gateway
+
+A standalone WooCommerce plugin **source package** lives in [`integrations/woocommerce-grateful/`](integrations/woocommerce-grateful/). It redirects WooCommerce orders to Grateful.me and fetches provider status server-side before allowing WooCommerce to mark an order paid. This integration is separate from LEXI's direct Solana USDC payment-request database: it does not create a LEXI invoice, verified Solana transfer, or LEXI-issued receipt.
+
+The source package was **not installed, activated, or exercised** in WordPress/WooCommerce, and no PHP/Composer/WordPress dependencies were installed. The Sandbox has no PHP, Composer, WP-CLI, PHPCS, or WooCommerce runtime. Its contract and security limitations are documented in [`integrations/woocommerce-grateful/README.md`](integrations/woocommerce-grateful/README.md); source references are in [`docs/upstream-feature-notes.md`](docs/upstream-feature-notes.md). No live Grateful account/credentials were supplied. Refunds are deliberately unsupported because the inspected upstream implementation is only a placeholder. Run the dependency-free source-contract check with `node integrations/woocommerce-grateful/tests/check-source.mjs`; this is not a substitute for PHP/WordPress integration tests.
+
+## Solana.com reference
+
+The requested [`solana-foundation/solana-com`](https://github.com/solana-foundation/solana-com) repository is used as a technical reference for the existing Solana Pay transfer URI, QR/mobile fallback, unique reference, and server-side verification design. No Solana Commerce Kit/beta package was installed and no upstream source code was copied. See [`docs/solana-com-feature-map.md`](docs/solana-com-feature-map.md). Grateful WooCommerce status is never represented as a LEXI-verified Solana transfer.
+
+
+**WooCommerce retry safety:** Clear client rejections are recorded as unpaid/rejected and may be retried after review. Timeouts, network/server errors, incomplete responses, and HTTP `408`, `409`, `425`, or `429` remain manual-reconciliation cases. Pending events cannot reopen terminal or manually held WooCommerce orders; late success requires manual review and cannot auto-fulfill through duplicate callbacks.
